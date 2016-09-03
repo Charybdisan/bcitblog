@@ -1,0 +1,31 @@
+<!--
+DTD for champions.xml
+-->
+
+<!-- The root element contains a data element, and then multiple source elements,
+each of which models data from a champion.
+The data comes from lolking.com.
+ -->
+<!ELEMENT league (sources)>
+<!ATTLIST league
+    year CDATA #REQUIRED
+  >
+
+<!ELEMENT sources (source+)>
+
+<!ELEMENT source (champion+)>
+<!ATTLIST source
+    metalane (top|mid|marksman) #REQUIRED
+  >
+
+<!ELEMENT champion (popularity,banrate)>
+<!ATTLIST champion
+    name CDATA #REQUIRED
+  >
+
+<!--- Champion popularity.
+Note that we cannot constrain its value. -->
+<!ELEMENT popularity (#PCDATA)>
+<!--- Champion banrate.
+Note that we cannot constrain its value. -->
+<!ELEMENT banrate (#PCDATA)>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='champions.xsl'?>
+<!--
+    Document   : champions.xml
+    Description:
+        League Of Legends (game) champions (characters) modeled by source.
+        Based upon a meta lane (a lane the champions most likely reside in).
+-->
+
+<league year="2014" source="www.ico.org"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="champions.xsd">
+    <sources>
+        <source metalane="top">
+                    <champion name="wukong">
+                            <popularity>8.18</popularity>
+                            <banrate>0.51</banrate>
+                    </champion>
+                    <champion name="renekton">			
+                            <popularity>24.26</popularity>
+                            <banrate>8.69</banrate>
+                    </champion>
+                    <champion name="riven">
+                            <popularity>11.75</popularity>
+                            <banrate>12.85</banrate>
+                    </champion>		
+                    <champion name="drmundo">
+                            <popularity>12.11</popularity>
+                            <banrate>64.46</banrate>
+                    </champion>		
+        </source>
+
+        <source metalane="mid">
+                <champion name="ziggs">
+                        <popularity>15.09</popularity>
+                        <banrate>20.56</banrate>
+                </champion>		
+                <champion name="gragas">
+                        <popularity>22.45</popularity>
+                        <banrate>25.89</banrate>
+                </champion>
+                <champion name="kayle">
+                        <popularity>13.63</popularity>
+                        <banrate>9.37</banrate>
+                </champion>
+                <champion name="khazix">
+                        <popularity>21.71</popularity>
+                        <banrate>37.28</banrate>
+                </champion>			
+        </source>
+
+        <source metalane="marksman">
+                <champion name="lucian">
+                        <popularity>18.95</popularity>
+                        <banrate>1.18</banrate>
+                </champion>		
+                <champion name="ezreal">
+                        <popularity>21.26</popularity>
+                        <banrate>0.11</banrate>
+                </champion>
+                <champion name="draven">
+                        <popularity>15.88</popularity>
+                        <banrate>5.85</banrate>
+                </champion>
+                <champion name="jinx">
+                        <popularity>34.82</popularity>
+                        <banrate>4.98</banrate>
+                </champion>		
+        </source>
+    </sources>
+</league>

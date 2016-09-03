@@ -1,0 +1,1 @@
+<button type="submit" id="upload" class="btn btn-primary {css_extras}" onclick="$('.fileupload').fileupload();">{label}</button>

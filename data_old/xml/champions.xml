@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE league SYSTEM "champions.dtd">
+<!--
+    Document   : champions.xml
+    Description:
+        League Of Legends (game) champions (characters) modeled by source.
+        Based upon a meta lane (a lane the champions most likely reside in).
+-->
+
+<league year="2014">
+    <sources>
+        <source metalane="top">
+                <champion name="Wukong">
+                        <popularity>8.18%</popularity>
+                        <banrate>0.51%</banrate>
+                </champion>
+                <champion name="Renekton">			
+                        <popularity>24.26%</popularity>
+                        <banrate>8.69%</banrate>
+                </champion>
+                <champion name="Riven">
+                        <popularity>11.75%</popularity>
+                        <banrate>12.85%</banrate>
+                </champion>		
+                <champion name="Dr.Mundo">
+                        <popularity>12.11%</popularity>
+                        <banrate>64.46%</banrate>
+                </champion>		
+        </source>
+
+        <source metalane="mid">
+                <champion name="Ziggs">
+                        <popularity>15.09%</popularity>
+                        <banrate>20.56%</banrate>
+                </champion>		
+                <champion name="Gragas">
+                        <popularity>22.45%</popularity>
+                        <banrate>25.89%</banrate>
+                </champion>
+                <champion name="Kayle">
+                        <popularity>13.63%</popularity>
+                        <banrate>9.37%</banrate>
+                </champion>
+                <champion name="Khazix">
+                        <popularity>21.71%</popularity>
+                        <banrate>37.28%</banrate>
+                </champion>			
+        </source>
+
+        <source metalane="marksman">
+                <champion name="Lucian">
+                        <popularity>18.95%</popularity>
+                        <banrate>1.18%</banrate>
+                </champion>		
+                <champion name="Ezreal">
+                        <popularity>21.26%</popularity>
+                        <banrate>0.11%</banrate>
+                </champion>
+                <champion name="Draven">
+                        <popularity>15.88%</popularity>
+                        <banrate>5.85%</banrate>
+                </champion>
+                <champion name="Jinx">
+                        <popularity>34.82%</popularity>
+                        <banrate>4.98%</banrate>
+                </champion>		
+        </source>
+    </sources>
+</league>

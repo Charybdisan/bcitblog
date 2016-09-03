@@ -1,0 +1,69 @@
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:simpleType name="Tyear">
+        <xs:restriction base="xs:integer">
+            <xs:pattern value="\d{4}"/>
+            <xs:minInclusive value="1998"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Tmetalane">
+        <xs:restriction base="xs:string">
+            <!-- to be added  -->
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Tname">
+        <xs:restriction base="xs:string">
+            <!-- to be added -->
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Tperc">
+        <xs:restriction base="xs:decimal">    
+            <xs:minExclusive value="0.0"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>    
+    </xs:simpleType>
+
+    <xs:element name="league">        
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="sources" maxOccurs="unbounded"/>        
+            </xs:sequence>
+            <xs:attribute name="year" type="Tyear"/>
+            <xs:attribute name="source" type="xs:string" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="sources">        
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="source" maxOccurs="unbounded"/>        
+            </xs:sequence>
+        </xs:complexType>
+        <xs:unique name="metalanes">
+            <xs:selector xpath="source"/>
+            <xs:field xpath="@metalane"/>
+        </xs:unique>
+    </xs:element>
+
+    <xs:element name="source">        
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="champion" maxOccurs="unbounded"/>        
+            </xs:sequence>
+            <xs:attribute name="metalane" type="Tmetalane" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="champion">        
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="popularity" type="Tperc"/>
+                <xs:element name="banrate" type="Tperc"/>
+            </xs:sequence>
+            <xs:attribute name="name" type="Tname"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
